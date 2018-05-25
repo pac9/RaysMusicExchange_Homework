@@ -17,7 +17,6 @@ public class SaxophoneTest {
         assertEquals(1, saxophone.getReed());
     }
 
-
     @Test
     public void canPlaySound() {
         assertEquals("I make the sound: whee", saxophone.play("whee"));
