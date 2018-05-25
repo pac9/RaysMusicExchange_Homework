@@ -12,9 +12,8 @@ public class Instrument {
       this.brand = brand;
   }
 
-  
 
-    public String getSection() {
+  public String getSection() {
         return section;
     }
 
