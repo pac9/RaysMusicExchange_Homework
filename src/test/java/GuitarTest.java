@@ -9,12 +9,22 @@ public class GuitarTest {
 
     @Before
     public void before(){
-        guitar = new Guitar(4);
+        guitar = new Guitar("Guitar", "Fender", 4);
     }
 
     @Test
     public void hasStrings(){
         assertEquals(4, guitar.getStrings());
+    }
+
+    @Test
+    public void hasSection(){
+        assertEquals("Guitar", guitar.getSection());
+    }
+
+    @Test
+    public void hasBrand(){
+        assertEquals("Fender", guitar.getBrand());
     }
 
     @Test

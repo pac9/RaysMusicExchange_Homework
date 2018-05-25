@@ -9,12 +9,22 @@ public class SaxophoneTest {
 
     @Before
     public void before(){
-        saxophone = new Saxophone(1);
+        saxophone = new Saxophone("Woodwind", "Yamaha", 1);
     }
 
     @Test
     public void hasReed(){
         assertEquals(1, saxophone.getReed());
+    }
+
+    @Test
+    public void hasSection(){
+        assertEquals("Woodwind", saxophone.getSection());
+    }
+
+    @Test
+    public void hasBrand(){
+        assertEquals("Yamaha", saxophone.getBrand());
     }
 
     @Test

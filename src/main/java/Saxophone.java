@@ -2,11 +2,12 @@ import interfaces.IPlay;
 
 import java.lang.String;
 
-public class Saxophone implements IPlay {
+public class Saxophone extends Instrument implements IPlay {
     
     private int reed;
     
-    public Saxophone(int reed){
+    public Saxophone(String section, String brand, int reed){
+        super(section, brand);
         this.reed = reed;
     }
 

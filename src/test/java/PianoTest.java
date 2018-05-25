@@ -9,7 +9,7 @@ public class PianoTest {
 
     @Before
     public void before(){
-        piano = new Piano(88, 230);
+        piano = new Piano("Piano", "Yamaha",88, 230);
     }
 
     @Test
@@ -20,6 +20,16 @@ public class PianoTest {
     @Test
     public void hasStrings(){
         assertEquals(230, piano.getStrings());
+    }
+
+    @Test
+    public void hasSection(){
+        assertEquals("Piano", piano.getSection());
+    }
+
+    @Test
+    public void hasBrand(){
+        assertEquals("Yamaha", piano.getBrand());
     }
 
     @Test
