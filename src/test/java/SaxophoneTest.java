@@ -9,7 +9,7 @@ public class SaxophoneTest {
 
     @Before
     public void before(){
-        saxophone = new Saxophone("Woodwind", "Yamaha", 1);
+        saxophone = new Saxophone(4, 300.00, 500.00,"Woodwind", "Yamaha", 1);
     }
 
     @Test
@@ -30,5 +30,20 @@ public class SaxophoneTest {
     @Test
     public void canPlaySound() {
         assertEquals("I make the sound: whee", saxophone.play("whee"));
+    }
+
+    @Test
+    public void hasStock(){
+        assertEquals(4, saxophone.getStock());
+    }
+
+    @Test
+    public void hasCost(){
+        assertEquals(300.00, saxophone.getCost(), 0.01);
+    }
+
+    @Test
+    public void hasSellingCost(){
+        assertEquals(500.00, saxophone.getSellingPrice(), 0.01);
     }
 }

@@ -7,8 +7,8 @@ public class Piano extends Instrument implements IPlay {
     private int key;
     private int string;
 
-    public Piano(String section, String brand, int key, int string) {
-        super(section, brand);
+    public Piano(int stock, double cost, double sellingPrice, String section, String brand, int key, int string) {
+        super(stock, cost, sellingPrice, section, brand);
         this.key = key;
         this.string = string;
     }

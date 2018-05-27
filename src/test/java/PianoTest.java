@@ -9,7 +9,7 @@ public class PianoTest {
 
     @Before
     public void before(){
-        piano = new Piano("Piano", "Yamaha",88, 230);
+        piano = new Piano(5, 600.00,1100.00,"Piano", "Yamaha",88, 230);
     }
 
     @Test
@@ -35,5 +35,20 @@ public class PianoTest {
     @Test
     public void canPlaySound() {
         assertEquals("I make the sound: plonkplonk", piano.play("plonkplonk"));
+    }
+
+    @Test
+    public void hasStock(){
+        assertEquals(5, piano.getStock());
+    }
+
+    @Test
+    public void hasCost(){
+        assertEquals(600.00, piano.getCost(), 0.01);
+    }
+
+    @Test
+    public void hasSellingCost(){
+        assertEquals(1100.00, piano.getSellingPrice(), 0.01);
     }
 }
