@@ -9,7 +9,7 @@ public class SheetMusicTest {
 
     @Before
     public void before(){
-        sheetMusic = new SheetMusic(24, 12.00, 20.00, "Abba's Greatest Hits");
+        sheetMusic = new SheetMusic(24, 12.00, 20.00, 8.00,"Abba's Greatest Hits");
     }
 
     @Test
@@ -32,5 +32,12 @@ public class SheetMusicTest {
     public void hasTitle(){
         assertEquals("Abba's Greatest Hits", sheetMusic.getTitle());
     }
+
+    @Test
+    public void hasMarkUp(){
+        double result = sheetMusic.calculateMarkUp(sheetMusic.getCost(), sheetMusic.getSellingPrice());
+        assertEquals(8.00, result, 0.01);
+    }
+
 
 }

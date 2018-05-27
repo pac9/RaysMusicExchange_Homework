@@ -9,7 +9,7 @@ public class ShopTest {
 
     @Before
     public void before(){
-        shop = new Shop(12, 100.00, 200.00);
+        shop = new Shop(12, 100.00, 200.00, 100.00);
     }
 
     @Test
@@ -25,5 +25,11 @@ public class ShopTest {
     @Test
     public void hasSellingCost(){
         assertEquals(200.00, shop.getSellingPrice(), 0.01);
+    }
+
+    @Test
+    public void hasMarkUp(){
+        double result = shop.calculateMarkUp(shop.getCost(), shop.getSellingPrice());
+        assertEquals(100.00, result, 0.01);
     }
 }

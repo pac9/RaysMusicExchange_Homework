@@ -1,12 +1,14 @@
+import interfaces.ISell;
+
 import java.lang.String;
 
-public class Reed extends Shop {
+public class Reed extends Shop implements ISell{
 
     private double strength;
 
 
-    public Reed(int stock, double cost, double sellingPrice, double strength){
-        super(stock, cost, sellingPrice);
+    public Reed(int stock, double cost, double sellingPrice, double markUp, double strength){
+        super(stock, cost, sellingPrice, markUp);
         this.strength = strength;
     }
 

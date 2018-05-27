@@ -10,7 +10,7 @@ public class InstrumentTest {
 
     @Before
     public void before(){
-        instrument = new Instrument(50, 30.00, 50.00,"Woodwind", "Yamaha");
+        instrument = new Instrument(50, 30.00, 50.00, 20.00,"Woodwind", "Yamaha");
     }
 
     @Test
@@ -36,6 +36,12 @@ public class InstrumentTest {
     @Test
     public void hasSellingCost(){
         assertEquals(50.00, instrument.getSellingPrice(), 0.01);
+    }
+
+    @Test
+    public void hasMarkUp(){
+        double result = instrument.calculateMarkUp(instrument.getCost(), instrument.getSellingPrice());
+        assertEquals(20.00, result, 0.01);
     }
 
 

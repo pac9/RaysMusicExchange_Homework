@@ -9,7 +9,7 @@ public class StringTest {
 
     @Before
     public void before(){
-        strings = new Strings(40, 5.00, 12.00, "Martin");
+        strings = new Strings(40, 5.00, 12.00, 7.00,"Martin");
     }
 
     @Test
@@ -32,4 +32,11 @@ public class StringTest {
     public void hasBrand(){
         assertEquals("Martin", strings.getBrand());
     }
+
+    @Test
+    public void hasMarkUp(){
+        double result = strings.calculateMarkUp(strings.getCost(), strings.getSellingPrice());
+        assertEquals(7.00, result, 0.01);
+    }
+
 }
