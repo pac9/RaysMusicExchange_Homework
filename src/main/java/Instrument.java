@@ -13,6 +13,8 @@ public class Instrument extends Shop implements ISell {
       super(stock, cost, sellingPrice, markUp);
       this.section = section;
       this.brand = brand;
+
+
   }
 
 
@@ -25,7 +27,12 @@ public class Instrument extends Shop implements ISell {
     }
 
     public double calculateMarkUp(double cost, double sellingPrice) {
-     return markUp = sellingPrice-cost;
+      markUp = sellingPrice-cost;
+        return markUp;
+    }
+
+    public int totalStock(int stock){
+        return getStock();
     }
 
 

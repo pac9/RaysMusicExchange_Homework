@@ -1,7 +1,7 @@
 package interfaces;
 
 public interface IPlay {
-        String play(String sound);
+       String play(String sound);
     }
 
 

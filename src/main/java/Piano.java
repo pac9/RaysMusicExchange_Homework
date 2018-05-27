@@ -30,4 +30,8 @@ public class Piano extends Instrument implements IPlay, ISell {
         markUp = sellingPrice - cost;
         return markUp;
     }
+
+    public int totalStock(int stock){
+        return getStock();
+    }
 }

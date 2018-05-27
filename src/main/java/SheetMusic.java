@@ -21,4 +21,8 @@ public class SheetMusic extends Shop implements ISell {
         markUp = sellingPrice - cost;
         return markUp;
     }
+
+    public int totalStock(int stock){
+        return getStock();
+    }
 }

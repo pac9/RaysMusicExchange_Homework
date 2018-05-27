@@ -25,5 +25,9 @@ public class Saxophone extends Instrument implements IPlay, ISell {
         return markUp;
     }
 
+    public int totalStock(int stock){
+        return getStock();
+    }
+
 
 }

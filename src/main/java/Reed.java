@@ -16,4 +16,8 @@ public class Reed extends Shop implements ISell{
     public double getStrength() {
         return this.strength;
     }
+
+    public int totalStock(int stock){
+        return getStock();
+    }
 }

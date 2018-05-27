@@ -6,6 +6,7 @@ import static org.junit.Assert.assertEquals;
 public class ShopTest {
 
     Shop shop;
+    Piano piano;
 
     @Before
     public void before(){
@@ -32,4 +33,15 @@ public class ShopTest {
         double result = shop.calculateMarkUp(shop.getCost(), shop.getSellingPrice());
         assertEquals(100.00, result, 0.01);
     }
+
+    @Test
+    public void hasTotalStock(){
+        assertEquals(12, shop.totalStock(12) );
+
+    }
+
+//    @Test
+//    public void stockFromISell(){
+//    shop.stock(piano);
+//    assertEquals(1, shop.getStock());}
 }
